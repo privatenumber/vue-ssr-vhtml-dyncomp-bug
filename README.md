@@ -1,6 +1,9 @@
-# Vue SSR dynamic component `v-html` bug
+# Vue SSR dynamic-component `v-html` bug
 
-This repository reproduces a Vue SSR bug when using `v-html` on a component that has a root [dynamic-component](https://vuejs.org/v2/guide/components.html#Dynamic-Components) (eg. `<component />`).
+This repository reproduces a Vue SSR bug when using `v-html` on a component that has a root [dynamic-component](https://vuejs.org/v2/guide/components.html#Dynamic-Components) (eg. `<component />`). Although there isn't a discrepancy in rendered HTML between client and SSR, it gives warnings that there is.
+
+The expected behavior is for there to be no hydration warning when the SSR and client markup are identical.
+
 
 ## Simple example
 
@@ -17,7 +20,7 @@ _Dynamic.vue_
 _App.vue_
 ```vue
 <template>
-  <dynamic v-html="'<div>hydration warning</div>'" />
+  <dynamic v-html="'<div>trigger hydration warning</div>'" />
 </template>
 
 ```
@@ -35,6 +38,7 @@ _This reproduction uses NUXT, but is reproducible outside of NUXT_
 ## Results
 
 ### D
+[Code](https://github.com/privatenumber/vue-ssr-vhtml-dyncomp-bug/blob/master/pages/index.vue#L9)
 
 #### Vue code
 ```vue
@@ -55,6 +59,7 @@ _This reproduction uses NUXT, but is reproducible outside of NUXT_
 ```
 
 ### E
+[Code](https://github.com/privatenumber/vue-ssr-vhtml-dyncomp-bug/blob/master/pages/index.vue#L11)
 
 #### Vue code
 ```vue
