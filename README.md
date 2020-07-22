@@ -1,4 +1,4 @@
-# Vue SSR dynamic-component `v-html` bug
+# Vue SSR `v-html` on dynamic-component bug
 
 This repository reproduces a Vue SSR bug when using `v-html` on a component that has a root [dynamic-component](https://vuejs.org/v2/guide/components.html#Dynamic-Components) (eg. `<component />`). Although there isn't a discrepancy in rendered HTML between client and SSR, it gives warnings that there is.
 
