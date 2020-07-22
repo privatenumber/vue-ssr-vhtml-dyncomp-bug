@@ -27,8 +27,6 @@ _App.vue_
 
 
 ## Reproduction
-_This reproduction uses NUXT, but is reproducible outside of NUXT_
-
 1. Clone repo
 2. Install deps `npm ci`
 3. `npm run dev` to start SSR NUXT server
@@ -38,7 +36,7 @@ _This reproduction uses NUXT, but is reproducible outside of NUXT_
 ## Results
 
 ### D
-[Code](https://github.com/privatenumber/vue-ssr-vhtml-dyncomp-bug/blob/master/pages/index.vue#L9)
+[Code](https://github.com/privatenumber/vue-ssr-vhtml-dyncomp-bug/blob/master/App.js#L44)
 
 #### Vue code
 ```vue
@@ -59,7 +57,7 @@ _This reproduction uses NUXT, but is reproducible outside of NUXT_
 ```
 
 ### E
-[Code](https://github.com/privatenumber/vue-ssr-vhtml-dyncomp-bug/blob/master/pages/index.vue#L11)
+[Code](https://github.com/privatenumber/vue-ssr-vhtml-dyncomp-bug/blob/master/App.js#L46)
 
 #### Vue code
 ```vue
